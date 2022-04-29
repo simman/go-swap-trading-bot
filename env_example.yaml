@@ -1,0 +1,44 @@
+server:
+  port: 5000
+  secret:
+
+node:
+  rpc: https://bsc-dataseed.binance.org/
+
+wallet:
+  privateKey:
+
+# ------------ The following configuration changes take effect immediately ----------------
+# Simple buy and sell strategies
+strtegy:
+  buy:
+    -
+      price: 245.5
+      percent: 0.02
+      gap: 30
+    -
+      price: 250
+      percent: 0.01
+      gap: 3600
+  sell:
+    -
+      price: 290
+      percent: 0.5
+      gap: 3600
+    -
+      price: 300
+      percent: 0.9
+      gap: 3600
+    -
+      price: 310
+      percent: 0.99
+      gap: 3600
+  st: 1.05 # Slippage Tolerance
+
+# configuration telegram bot
+telegram:
+  debug: true
+  timeout: 60
+  token:
+  managerUserId:
+    - 1004314283
